@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodEats — Eat Right for How You Feel</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Link to CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── BACKGROUND BLOBS ── -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="logo">Mood<span>Eats</span></div>
+    <p class="tagline">Nutrition that listens to how you feel</p>
+  </header>
+
+  <!-- ── MAIN APP ── -->
+  <main>
+
+    <!-- STEP 1: Mood Selection -->
+    <section class="card mood-card" id="moodSection">
+      <div class="step-label">Step 1</div>
+      <h2>How are you feeling <em>right now?</em></h2>
+      <p class="card-sub">Pick the mood that best describes your current state</p>
+
+      <div class="mood-grid" id="moodGrid">
+        <button class="mood-btn" data-mood="happy">
+          <span class="mood-emoji">😊</span>
+          <span class="mood-name">Happy</span>
+          <span class="mood-hint">Joyful & upbeat</span>
+        </button>
+        <button class="mood-btn" data-mood="stressed">
+          <span class="mood-emoji">😤</span>
+          <span class="mood-name">Stressed</span>
+          <span class="mood-hint">Anxious & tense</span>
+        </button>
+        <button class="mood-btn" data-mood="tired">
+          <span class="mood-emoji">😴</span>
+          <span class="mood-name">Tired</span>
+          <span class="mood-hint">Low energy</span>
+        </button>
+        <button class="mood-btn" data-mood="sad">
+          <span class="mood-emoji">😢</span>
+          <span class="mood-name">Sad</span>
+          <span class="mood-hint">Down & low</span>
+        </button>
+        <button class="mood-btn" data-mood="energetic">
+          <span class="mood-emoji">⚡</span>
+          <span class="mood-name">Energetic</span>
+          <span class="mood-hint">Active & pumped</span>
+        </button>
+        <button class="mood-btn" data-mood="anxious">
+          <span class="mood-emoji">😰</span>
+          <span class="mood-name">Anxious</span>
+          <span class="mood-hint">Worried & restless</span>
+        </button>
+        <button class="mood-btn" data-mood="focused">
+          <span class="mood-emoji">🎯</span>
+          <span class="mood-name">Focused</span>
+          <span class="mood-hint">Sharp & alert</span>
+        </button>
+        <button class="mood-btn" data-mood="sick">
+          <span class="mood-emoji">🤒</span>
+          <span class="mood-name">Sick</span>
+          <span class="mood-hint">Unwell & weak</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 2: Results Section (hidden initially) -->
+    <section class="card results-card hidden" id="resultsSection">
+      <div class="results-header">
+        <div>
+          <div class="step-label">Step 2</div>
+          <h2 id="resultsTitle">Your suggestions</h2>
+          <p class="card-sub" id="resultsSubtitle"></p>
+        </div>
+        <button class="back-btn" id="backBtn">← Change Mood</button>
+      </div>
+
+      <div class="mood-tip-box" id="moodTipBox"></div>
+
+      <div class="food-grid" id="foodGrid"></div>
+
+      <div class="nutrition-bar" id="nutritionBar"></div>
+
+      <button class="log-btn" id="logBtn">✅ Log This Mood Entry</button>
+    </section>
+
+    <!-- STEP 3: Mood Log (History) -->
+    <section class="card log-card" id="logSection">
+      <div class="log-header">
+        <h3>📋 Today's Mood Log</h3>
+        <button class="clear-log-btn" id="clearLogBtn">Clear All</button>
+      </div>
+      <div id="logList">
+        <p class="log-empty">No entries yet. Select a mood to get started!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>MoodEats &mdash; Frontend project using HTML, CSS &amp; JavaScript</p>
+    <p class="footer-sub">Data is stored locally in your browser · No backend required</p>
+  </footer>
+
+  <!-- ✅ Link to JavaScript file — ALWAYS at bottom of body -->
+  <script src="script.js"></script>
+
+</body>
+</html>
